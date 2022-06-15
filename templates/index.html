@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>demiparcelaatucasa</title>
+    <meta charset="utf-8" />
+    <http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Flogo-web.svg?v=1631414481599" />
+    <!-- google font import -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Girassol&family=Noto+Sans&family=Rampart+One&display=swap");
+    </style>
+
+    <!-- Import the webpage's stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #ffff;"
+      >
+        <a class="navbar-brand" href="#">LOGO</a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stripe">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#maps">Ubicación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="acercade.html">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#email">Contáctanos</a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="cover d-flex justify-content-center align-items-center flex-column"
+      >
+        <h1>
+          De mi parcela a tu casa
+        </h1>
+        <p>
+          las verduras más frescas y las frutas más jugosas
+        </p>
+        <button class="btn btn-success">
+          Comprar
+        </button>
+      </div>
+    </header>
+    <section>
+      <!-- SECCIÓN DE TARJETAS -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
+          <div class="container mt-5 mb-5">
+            <div class="card">
+              <div
+                title="Campesino entre cultivo de maíz"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fcard1.jpg?v=1631116901700)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Producción local</h5>
+                <p class="card-text">
+                  Agricultores de la región trabajan con esmero para darte lo
+                  mejor de estás tierras
+                </p>
+                <a href="#" class="btn btn-primary">Más información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
+          <div class="container mt-5 mb-5">
+            <div class="card">
+              <div
+                title="Persona sosteniendo remolachas"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fcard2.jpg?v=1631175332338)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Precios justos</h5>
+                <p class="card-text">
+                  Eliminamos a los coyotes de la cadena de negocio para ofrecer
+                  mejores precios
+                </p>
+                <a href="#" class="btn btn-primary">Más información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
+          <div class="container mt-5 mb-5">
+            <div class="card">
+              <div
+                title="Plantas germinando"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fcard3_2.jpg?v=1631175468995)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Responsables con el medio ambiente</h5>
+                <p class="card-text">
+                  Nos valemos del ¡desarrollo sostenible!
+                </p>
+                <a href="#" class="btn btn-primary">Más información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-5">
+            <img
+              src="https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Femail_capture.svg?v=1631318395842"
+              alt="dibujo de un imán atrayendo emails"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-6 col-sm-4">
+            <h3>
+              Con el esfuerzo de todos
+            </h3>
+            <p>
+              Hacemos sostenible nuestros sueños.
+            </p>
+            <a href="https://goo.gl/maps/4335o3CiccgzLL5w8">Ver en Maps</a>
+          </div>
+        </div>
+        <form action="">
+          <div class="form-group d-flex" id="email">
+            <label for="email">Correo electrónico</label>
+            <div class="flex-fill p-2 bd-highlight">
+              <input type="email" id="email" class="form-control" />
+            </div>
+            <div class="d-flex p-2">
+              <button type="submit" class="btn btn-outline-success">
+                Enviar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section>
+      <!-- CARRUCEL DE PRODUCTOS-->
+      <div class="container mt-5 mb-5" id="stripe">
+        <div class="product-stripe">
+          <div class="stripe-container">
+            <div class="card">
+              <div
+                title="Conjunto de piñas"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fnathalia-rosa-Wf-6i0dNqfc-unsplash.jpg?v=1631348191769)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Piña - 1Kg</h5>
+                <span class="badge bg-success">$25MXN</span>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                title="Miel de abeja - chica"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.me/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fthumbnails%2Fmiel.png?1638390352830)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Miel natural- chica</h5>
+                <span class="badge bg-success">$60MXN</span>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                title="Nanche de temporada"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.me/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fthumbnails%2Fnanche2.jpeg?1638390308025)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Nanche - 300Gr</h5>
+                <span class="badge bg-success">$20MXN</span>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                title="Flor de calabaza"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fflordecalabaza.jpg?v=1631348191691)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Manojo de flor de calabaza</h5>
+                <span class="badge bg-success">$20MXN</span>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                title="Semilla de calabaza"
+                class="cover cover-small"
+                style="background-image:url(https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fsemilladecalabaza_470x.jpg?v=1631348191891)"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Semilla de calabaza - 1Kg</h5>
+                <span class="badge bg-success">$100MXN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mt-5 mb-5" id="maps">
+        <h4>Los esperamos en</h4>
+        <p>Av. Costa Maya 1, 228, 77516 Cancún, Q.R.</p>
+        <div class="responsive-iframe">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.2508675666795!2d-86.85199568568916!3d21.182190987899954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEwJzU1LjkiTiA4NsKwNTAnNTkuMyJX!5e0!3m2!1ses-419!2smx!4v1631385122118!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        </div>
+    </section>
+  </body>
+</html>

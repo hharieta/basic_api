@@ -1,0 +1,116 @@
+/* CSS files add styling rules to your content*/
+body {
+  margin: 0en;
+  font-family: 'Noto Sans', sans-serif;
+}
+h1{
+  font-family: 'Pacifico', cursive;
+}
+h2,h3,h4,h5{
+  font-family: 'Fjalla One', sans-serif;
+}
+
+
+/* cover es una clase en HTML (en CSS se indica con un .*/
+.cover {
+  height: 400px;
+  background-image: url(https://cdn.glitch.com/d60819e6-b188-48e4-88d8-bfb5aef4fed6%2Fbackground.jpg?v=1631082523564);
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+.cover-small{
+  height: 200px;
+  background-blend-mode: normal;
+}
+.card{
+    border: 0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0, 0.1), 0 2px 4px -1px rgba(0,0,0, 0.06);
+}
+.card-title{
+  min-height:3rem;
+}
+.card-text{
+  min-height:10rem;
+}
+
+.product-stripe, .slider{
+  overflow-x: scroll;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.stripe-container, .slider-container{
+  display: flex;
+  flex-direction: row;
+}
+.stripe-container .card{
+  width: 300px;
+  flex-shrink:0;
+  margin-right: 1rem;
+}
+.responsive-iframe{
+  position: relative;
+  padding-top: 56.25%;
+}
+.responsive-iframe iframe{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider{
+  overflow-x: hidden;
+}
+.slider-container{
+  transform: translateX(0);
+  animation: slider 15s infinite;
+}
+.image-container{
+  width: 100%;
+  padding-top: 56.25%;
+  background-size:cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+.avatar{
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  display:inline-block;
+}
+
+@keyframes slider {
+  0%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-100%);
+  }
+  45%{
+    transform: translateX(-100%);
+  }
+  50%{
+    transform: translateX(-200%);
+  }
+  70%{
+    transform: translateX(-200%);
+  }
+  75%{
+    transform: translateX(-300%);
+  }
+  95%{
+    transform: translateX(-300%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
