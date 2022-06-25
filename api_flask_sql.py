@@ -1,5 +1,6 @@
 from crypt import methods
 from dataclasses import fields
+import re
 from unittest import result
 from flask import Flask, jsonify, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -54,6 +55,20 @@ def post_order():
     db.session.commit()
 
     return redirect(url_for('get_order'))
+
+@app.route('/order/<order_id>', methods = ['DELETE'])
+def delete_order(order_id):
+    T = "deleted"
+    F = "imposible delete it. Item not found"
+
+    try:
+        entry = App.query.get(order_id)
+        db.session.delete(entry)
+        db.session.commit()
+    except:
+        pass
+    finally:
+        return T if entry else F
 
 
 if __name__ == '__main__':
