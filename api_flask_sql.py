@@ -1,7 +1,4 @@
 from crypt import methods
-from dataclasses import fields
-import re
-from unittest import result
 from flask import Flask, jsonify, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -33,14 +30,7 @@ def hello_world():
     return 'Hello World!'
 
 
-@app.route('/order')
-def get_order():
-    entries = App.query.all()
-    result = app_schema.dump(entries)
-
-    return jsonify(result)
-
-
+# CREATE
 @app.route('/order', methods = ['POST'])
 def post_order():
     req = request.get_json()
@@ -56,6 +46,32 @@ def post_order():
 
     return redirect(url_for('get_order'))
 
+
+# READ
+@app.route('/order')
+def get_order():
+    entries = App.query.all()
+    result = app_schema.dump(entries)
+
+    return jsonify(result)
+
+
+# UPDATE
+@app.route('/order/<order_id>', methods = ['PUT'])
+def update_order(order_id):
+    req = request.get_json()
+    entry = App.query.get(order_id)
+    entry.size = req["size"]
+    entry.toppings = req["toppings"]
+    entry.crust = req["crust"]
+
+    db.session.add(entry)
+    db.session.commit()
+
+    return redirect(url_for("get_order"))
+
+
+# DELETE
 @app.route('/order/<order_id>', methods = ['DELETE'])
 def delete_order(order_id):
     T = "deleted"
